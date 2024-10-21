@@ -25,7 +25,7 @@
             <ul class="w-full h-full flex items-center justify-between text-sm font-medium tracking-wider relative">
                 <li class="nav__list-item h-full">
                     <a class="nav__link" href="">KAMPANYALAR</a>
-                    <div class="nav__inner-menu flex justify-between absolute left-0 top-[100%] w-[calc(100vw-4.5rem)] p-12 border-t bg-white shadow">
+                    <div class="nav__inner-menu flex justify-between absolute left-0 top-[100%] z-[999999] w-[calc(100vw-4.5rem)] p-12 border-t bg-white shadow">
                         <ul class="flex flex-col gap-8 text-[1.05rem] text-gray-600">
                             <li>
                                 <a href="">
@@ -70,7 +70,7 @@
                 </li>
                 <li class="nav__list-item h-full">
                     <a class="nav__link" href="">YENİ GELENLER</a>
-                    <div class="nav__inner-menu flex justify-between absolute left-0 top-[100%] w-[calc(100vw-4.5rem)] p-12 border-t bg-white shadow">
+                    <div class="nav__inner-menu flex justify-between absolute left-0 top-[100%] z-[999999] w-[calc(100vw-4.5rem)] p-12 border-t bg-white shadow">
                         <ul class="flex flex-col gap-8 text-[1.05rem] text-gray-600">
                             <li>
                                 <a href="">
@@ -115,7 +115,7 @@
                 </li>
                 <li class="nav__list-item h-full"> 
                     <a class="nav__link" href="">ÜST GİYİM</a>
-                    <div class="nav__inner-menu flex justify-between absolute left-0 top-[100%] w-[calc(100vw-4.5rem)] p-12 border-t bg-white shadow">
+                    <div class="nav__inner-menu flex justify-between absolute left-0 top-[100%] z-[999999] w-[calc(100vw-4.5rem)] p-12 border-t bg-white shadow">
                         <ul class="flex flex-col gap-8 text-[1.05rem] text-gray-600">
                             <li>
                                 <a href="">
