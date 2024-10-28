@@ -1,19 +1,20 @@
 <template>
   <header>
     <img src="@/assets/img/advert-banner.jpg" alt="">
-    <div class="px-8 py-5">
-        <div class="flex justify-between">
+    <div class="py-5">
+        <div class="flex justify-between px-8">
             <img src="@/assets/img/logo.png" alt="">
-            <div class="flex gap-5">
-                <span class="mdi mdi-magnify text-2xl"></span>
-                <span class="mdi mdi-account-outline text-2xl"></span>
-                <div class="relative">
+            <div class="flex items-center gap-5">
+                <span @click="toggleNav" class="mdi mdi-menu text-3xl xl:hidden"></span>
+                <span class="mdi mdi-magnify text-2xl hidden sm:block"></span>
+                <span class="mdi mdi-account-outline text-2xl hidden sm:block"></span>
+                <div class="relative hidden sm:block">
                     <span class="mdi mdi-heart-outline text-2xl"></span>
                     <span class="absolute top-[-.4rem] right-[-.4rem] w-5 h-5 inline-block bg-black text-white rounded-full text-[0.7rem] flex justify-center items-center">
                         0
                     </span>
                 </div>
-                <div class="relative">
+                <div class="relative hidden sm:block">
                     <span class="mdi mdi-cart-outline text-2xl"></span>
                     <span class="absolute top-[-.4rem] right-[-.4rem] w-5 h-5 inline-block bg-black text-white rounded-full text-[0.7rem] flex justify-center items-center">
                         0
@@ -21,11 +22,11 @@
                 </div>
             </div>
         </div>
-        <nav class="h-8 flex items-center">
-            <ul class="w-full h-full flex items-center justify-between text-sm font-medium tracking-wider relative">
+        <nav class="flex items-center relative xl:px-8">
+            <ul class="mobil-menu w-full flex items-center justify-between text-sm font-medium tracking-wider relative">
                 <li class="nav__list-item h-full">
                     <a class="nav__link" href="">KAMPANYALAR</a>
-                    <div class="nav__inner-menu flex justify-between absolute left-0 top-[100%] z-[999999] w-[calc(100vw-4.5rem)] p-12 border-t bg-white shadow">
+                    <div class="nav__inner-menu  flex justify-between absolute left-0 top-[100%] z-[999999] w-[calc(100vw-4.5rem)] p-12 border-t bg-white shadow">
                         <ul class="flex flex-col gap-8 text-[1.05rem] text-gray-600">
                             <li>
                                 <a href="">
@@ -187,7 +188,17 @@
 
 <script>
 export default {
+    setup(){
 
+        function toggleNav(){
+            const mobilMenu = document.querySelector('.mobil-menu');
+            mobilMenu.classList.toggle('open')
+        }
+
+        return{
+            toggleNav
+        }
+    }
 }
 </script>
 
@@ -213,12 +224,40 @@ export default {
     }
 
     .nav__inner-menu{
-        display: none;
+        display: none !important;
     }
     .nav__list-item:hover  .nav__inner-menu{
-        display: flex;
+        display: flex !important;
     }
     .nav__inner-menu:hover{
         display: block;
+    }
+
+    @media only screen and (max-width:1280px){
+
+        .mobil-menu{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 999999;
+            
+            flex-direction: column;
+            background-color: #333;
+            color: #fff;
+            height: 0;
+            overflow: hidden;
+            transition: all 0.5;
+        }
+        .mobil-menu.open{
+            height: 500px;
+        }
+        .mobil-menu li{
+            width: 100%;
+            text-align: center;
+            padding: 1rem 0;
+            border-bottom:1px solid rgb(51, 51, 51) ;
+            box-shadow: 1px 1px 1px rgba(180, 178, 178, 0.1);
+        }
     }
 </style>
