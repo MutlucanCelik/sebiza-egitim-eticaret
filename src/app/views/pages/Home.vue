@@ -79,28 +79,6 @@
     </div>
   
   </section>
-  <section id="new_arrivals" class="my-12 px-12">
-    <div class="flex gap-12 justify-center items-center">
-      <div class="h-px w-[35%] bg-gray-800"></div>
-      <h1 class="text-2xl font-bold text-gray-700 tracking-wider">Yeni Geleneler</h1>
-      <div class="h-px w-[35%] bg-gray-800"></div>
-    </div>
-      <swiper
-        id="swiper_new_arrivals"
-        :navigation="true"
-        :slidesPerView="5"
-        :spaceBetween="30"
-        :modules="newArrivalsModules"
-        class="mySwiper swiper-new-arrivals mt-10"
-      >
-        <swiper-slide>
-          <div class="w-full h-full bg-red-400">
-            
-          </div>
-        </swiper-slide>
-
-      </swiper>
-  </section>
 
 </template>
 

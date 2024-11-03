@@ -7,7 +7,7 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
+    screens: {
       '5xl': '2560px',
       '4xl': '1921px',
       '3xl': "1536px",
